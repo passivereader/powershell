@@ -8,6 +8,7 @@ Create `C:\Users\YOUR_USER_NAME\Documents\WindowsPowerShell\Microsoft.PowerShell
 $VIMPATH = $SCRIPTPATH + "C:\Program Files\Vim\vim91\vim.exe"
 Set-Alias vim $VIMPATH
 cd C:\Users\your_user\git_repos
-ssh-add C:\Users\your_user\.ssh\id_ed25519```
+ssh-add C:\Users\your_user\.ssh\id_ed25519
+```
 Don't forget to adjust execution policy: `Set-ExecutionPolicy -Executionpolicy RemoteSigned -Scope Currentuser`
 Verify: `Get-ExecutionPolicy -List`
