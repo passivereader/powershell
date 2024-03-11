@@ -17,3 +17,6 @@ In your browser: F12 - Network tab - open a website - right-click a line with a 
 
 # Setting environment variables
 `set` for current console only, `setx` for all consoles
+
+# Keyboard shortcut to open PowerShell as there's no easy CTRL+ALT+T
+`Win+X` followed by `i` or `A` for elevated priviliges.
