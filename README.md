@@ -10,5 +10,4 @@ Set-Alias vim $VIMPATH
 cd C:\Users\your_user\git_repos
 ssh-add C:\Users\your_user\.ssh\id_ed25519
 ```
-Don't forget to adjust execution policy: `Set-ExecutionPolicy -Executionpolicy RemoteSigned -Scope Currentuser`
-Verify: `Get-ExecutionPolicy -List`
+Don't forget to adjust execution policy and verify: `Set-ExecutionPolicy -Executionpolicy RemoteSigned -Scope Currentuser`, `Get-ExecutionPolicy -List`
