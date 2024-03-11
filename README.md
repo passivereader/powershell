@@ -3,7 +3,7 @@ Elevated shell: `Get-Service ssh-agent | Set-Service -StartupType Automatic -Pas
 Git config adjustments (yes, these are forward slashes): `git config --global core.sshCommand C:/Windows/System32/OpenSSH/ssh.exe`
 
 # Vim
-Create and `C:\Users\YOUR_USER_NAME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`.
+Create `C:\Users\YOUR_USER_NAME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1` and edit:
 ```# NOTE: different locations for .ps1 profile files
 $VIMPATH = $SCRIPTPATH + "C:\Program Files\Vim\vim91\vim.exe"
 Set-Alias vim $VIMPATH
