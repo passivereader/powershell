@@ -11,3 +11,7 @@ cd C:\Users\your_user\git_repos
 ssh-add C:\Users\your_user\.ssh\id_ed25519
 ```
 Don't forget to adjust execution policy and verify: `Set-ExecutionPolicy -Executionpolicy RemoteSigned -Scope Currentuser`, `Get-ExecutionPolicy -List`
+
+# Make your browser tell you how to use Invoke-WebRequest
+In your browser: F12 - Network tab - open a website - right-click a line with a HTTP status code (usually 200) - there should be a copy as PowerShell option.
+
