@@ -4,7 +4,8 @@ Git config adjustments (yes, these are forward slashes): `git config --global co
 
 # Vim
 Create `C:\Users\YOUR_USER_NAME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1` and edit:
-```# NOTE: different locations for .ps1 profile files
+```
+# NOTE: different locations for .ps1 profile files
 $VIMPATH = $SCRIPTPATH + "C:\Program Files\Vim\vim91\vim.exe"
 Set-Alias vim $VIMPATH
 cd C:\Users\your_user\git_repos
@@ -17,7 +18,8 @@ In your browser: F12 - Network tab - open a website - right-click a line with a 
 
 # Setting and displaying environment variables
 `set` for current console only, `setx` for all consoles. Show all environment variables using `dir env:`
-```> set MY_VAR var_value
+```
+> set MY_VAR var_value
 > $Env:MY_VAR
 var_value
 ```
