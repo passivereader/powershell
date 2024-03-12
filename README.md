@@ -15,8 +15,12 @@ Don't forget to adjust execution policy and verify: `Set-ExecutionPolicy -Execut
 # Make your browser tell you how to use Invoke-WebRequest
 In your browser: F12 - Network tab - open a website - right-click a line with a HTTP status code (usually 200) - there should be a copy as PowerShell option.
 
-# Setting environment variables
-`set` for current console only, `setx` for all consoles
+# Setting and displaying environment variables
+`set` for current console only, `setx` for all consoles. Show all environment variables using `dir env:`
+```> set MY_VAR var_value
+> $Env:MY_VAR
+var_value
+```
 
 # Keyboard shortcut to open PowerShell as there's no easy CTRL+ALT+T
 `Win+X` followed by `i` or `A` for elevated priviliges.
