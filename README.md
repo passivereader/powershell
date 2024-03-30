@@ -26,3 +26,18 @@ var_value
 
 # Keyboard shortcut to open PowerShell as there's no easy CTRL+ALT+T
 `Win+X` followed by `i` or `A` for elevated priviliges.
+
+# What is splatting in PowerShell?
+Splatting allows you to pass a set of parameter values to a command as a single hashtable or dictionary.
+
+```
+$params = @{ Name = "John Doe" DisplayName = "John Doe" EmailAddress = "johndoe@example.com Path = "OU=ExampleOrg,OU=ExampleEntityType,DC=exampledc,DC=org" AccountPassword = (ConvertTo-SecureString "password" -AsPlainText -force) } New-ADUser @params
+```
+
+# Commands of interest in no specific order
+```
+Write-Host "Hello" # cat equivalent
+
+
+```
+
