@@ -25,7 +25,7 @@ var_value
 ```
 
 # Keyboard shortcut to open PowerShell as there's no easy CTRL+ALT+T
-`Win+X` followed by `i` or `A` for elevated priviliges.
+`Win+X` followed by `i` or `A` for elevated privileges.
 
 
 
