@@ -1,5 +1,5 @@
 # Get-Help
-`get-help`
+`get-help get-childitem`
 
 # Everyday PowerShell stuff
 ## Human-readable file size
