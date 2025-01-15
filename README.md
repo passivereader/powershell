@@ -64,9 +64,20 @@ Add-LocalGroupMember -Group "Hyper-V Administrators" -Member "italy"
 Get-LocalUser | Select-Object * | Out-GridView
 ```
 
-# ssh-agent
-Elevated shell: `Get-Service ssh-agent | Set-Service -StartupType Automatic -PassThru | Start-Service`
-Git config adjustments (yes, these are forward slashes): `git config --global core.sshCommand C:/Windows/System32/OpenSSH/ssh.exe`
+
+# ssh
+Elevated shell to start ssh-agent: `Get-Service ssh-agent | Set-Service -StartupType Automatic -PassThru | Start-Service`
+`$env:USERPROFILE\.ssh\config` must be UTF-8. Check using notepad++ (bottom right corner) and change via Encoding manu.
+
+# Git
+Git config adjustments (yes, these are forward slashes):
+```
+winget install Git.Git
+git config --global core.sshCommand C:/Windows/System32/OpenSSH/ssh.exe
+git config --global user.email "you@example.com"
+git config --global user.name "you"
+```
+
 
 # Vim
 Create `C:\Users\YOUR_USER_NAME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1` and edit:
