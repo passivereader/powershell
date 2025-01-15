@@ -78,8 +78,8 @@ git config --global user.email "you@example.com"
 git config --global user.name "you"
 ```
 
-
 # Vim
+Perhaps you wish to avoid weird Windows-isms: `start notepad++ .\README.md`
 Create `C:\Users\YOUR_USER_NAME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1` and edit:
 ```
 # NOTE: different locations for .ps1 profile files
