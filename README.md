@@ -2,6 +2,7 @@
 `get-help`
 
 # Everyday PowerShell stuff
+## Human-readable file size
 ```
 Start-Process powershell -Verb runAs # su
 
@@ -14,6 +15,13 @@ PS C:\Users\Public\Documents> Get-Item .\list.csv | Select-Object Length
 Length
 ------
 654466
+```
+## Disable ALT-Tab in browser multitasking option
+```
+$RegPath = "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
+$Name = "MultiTaskingAltTabFilter"
+$Value = 3
+Set-ItemProperty -Path $RegPath -Name $Name -Value $Value
 ```
 # Hyper-V and PowerShell
 
