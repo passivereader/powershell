@@ -14,12 +14,10 @@ PS C:\Users\Public\Documents> Get-Item .\list.csv | Select-Object Length
 Length
 ------
 654466
-
-
 ```
 # Hyper-V and PowerShell
 
-# Broken Hyper-V checkpoints
+## Broken Hyper-V checkpoints
 ```
 cd C:\ProgramData\Microsoft\Windows\Virtual Hard Disks\
 Test-VHD ".\New Virtual Machine.vhdx"
