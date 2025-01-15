@@ -1,5 +1,63 @@
 # Get-Help
 `get-help`
+
+# Everyday PowerShell stuff
+```
+Start-Process powershell -Verb runAs # su
+
+PS C:\Users\Public\Documents> (Get-Item .\list.csv).Length
+654466
+PS C:\Users\Public\Documents> (Get-Item .\list.csv).Length / 1MB
+0.624147415161133
+PS C:\Users\Public\Documents> Get-Item .\list.csv | Select-Object Length
+
+Length
+------
+654466
+
+
+```
+# Hyper-V and PowerShell
+
+# Broken Hyper-V checkpoints
+```
+cd C:\ProgramData\Microsoft\Windows\Virtual Hard Disks\
+Test-VHD ".\New Virtual Machine.vhdx"
+Test-VHD ".\New Virtual Machine_1337718A-1337-1337-1337-45D50BBE1337.avhdx"
+Test-VHD: Failed to validate the disk information.
+[...]
+Set-VHD -Path '.\New Virtual Machine_1337718A-1337-1337-1337-45D50BBE1337.avhdx' -ParentPath '.\New Virtual Machine.vhdx'
+Set-VHD: Failed to set new parent for the virtual disk.
+There exists ID mismatch between the differencing virtual hard disk and the parent disk.
+Set-VHD -Path <child.vhdx> -ParentPath  <parent.vhdx> -IgnoreIdMismatch
+```
+
+## Hyper-V copy&paste
+Copy&Paste (requires RDP group membership on guest system): Integration Services - Guest Services
+```
+Get-LocalUser
+Get-LocalGroup | Format-List
+Get-LocalGroup | Out-GridView # opens window for output
+Get-LocalGroup | Select-String -Pattern "Remote"
+Get-LocalGroupMember -Group 'Remote Desktop Users'
+Add-LocalGroupMember -Group "Remote Desktop Users" -Member "hypervguestuser"
+
+$rdsMembers = @(
+'host\user',
+'host\anotheruser'
+)
+
+Add-LocalGroupMember -Group 'Remote Desktop Users' -Member $rdsMembers
+```
+# User and group management
+
+```
+Get-LocalGroupMember -Group "Hyper-V Administrators"
+Add-LocalGroupMember -Group "Hyper-V Administrators" -Member "NT AUTHORITY\Local account"
+Add-LocalGroupMember -Group "Hyper-V Administrators" -Member "italy"
+Get-LocalUser | Select-Object * | Out-GridView
+```
+
 # ssh-agent
 Elevated shell: `Get-Service ssh-agent | Set-Service -StartupType Automatic -PassThru | Start-Service`
 Git config adjustments (yes, these are forward slashes): `git config --global core.sshCommand C:/Windows/System32/OpenSSH/ssh.exe`
@@ -29,7 +87,8 @@ var_value
 # Keyboard shortcut to open PowerShell as there's no easy CTRL+ALT+T
 `Win+X` followed by `i` or `A` for elevated privileges.
 
-
+# Move on PowerShell command line
+`home` (`pos1`) and `end` move the cursor. Additional `SHIFT` highlights, `CTRL` would delete.
 
 (from here: notes from "PowerShell for Systems Engineers" book)
 # What is splatting in PowerShell?
