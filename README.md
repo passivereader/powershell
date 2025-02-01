@@ -143,6 +143,7 @@ Install-Module ActiveDirectory # admin privileges; triggers NuGet requirement
 ## EventViewer
 Create custom view - XML - Edit query manually:
 ```
+<QueryList>
 <Query Id="0" Path="Security">
 <Select Path="Security">
 *[System[
