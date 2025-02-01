@@ -139,3 +139,19 @@ Get-InstalledModule # will access %userprofile%\Documents\WindowsPowerShell
 Install-Module ActiveDirectory # admin privileges; triggers NuGet requirement
 ```
 
+# Not PowerShell but still useful
+## EventViewer
+Create custom view - XML - Edit query manually:
+```
+<Query Id="0" Path="Security">
+<Select Path="Security">
+*[System[
+(EventID=4524 or EventID=4625 or EventID=4634)
+and
+TimeCreated[timediff(@SystemTime) &lt;=604800000]
+]]
+and *[EventData[Data[@Name='LogonType'] = '2' or Data[@Name='LogonType'] = '3']]
+</Select>
+</Query>
+</QueryList>
+```
